@@ -3,12 +3,12 @@ const router = express.Router();
 const { getTransactions, addTransaction, deleteTransaction } = require('../controllers/transactionController')
 
 router
-    .route('/')
+    .route('https://etracker-app.herokuapp.com')
     .get(getTransactions)
     .post(addTransaction);
 
 router
-    .route('/:id')
+    .route('https://etracker-app.herokuapp.com/:id')
     .delete(deleteTransaction)
 
 module.exports = router;
