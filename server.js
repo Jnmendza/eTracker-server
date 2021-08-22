@@ -12,7 +12,9 @@ connectDB();
 const transactions = require('./routes/transactions')
 
 const app = express();
-app.use(cors())
+app.use(cors({
+    origin: "*"
+}))
 app.use(express.json())
 
 if(process.env.NODE_ENV === 'development') {
